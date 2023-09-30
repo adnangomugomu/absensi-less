@@ -34,11 +34,11 @@
         <tbody>
             @foreach ($row->absensi as $item)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $item->pertemuan->tanggal }}</td>
-                    <td>{{ $item->pertemuan->pertemuan_ke }}</td>
+                    <td style="text-align: center;">{{ $loop->iteration }}</td>
+                    <td style="text-align: center;">{{ $item->pertemuan->tanggal }}</td>
+                    <td style="text-align: center;">{{ $item->pertemuan->pertemuan_ke }}</td>
                     <td>{{ $item->pertemuan->materi }}</td>
-                    <td>{{ $item->created_at }}</td>
+                    <td style="text-align: center;">{{ $item->created_at }}</td>
                 </tr>
             @endforeach
         </tbody>
