@@ -231,7 +231,9 @@ class AbsensiController extends Controller
                 return $dt->user->name;
             })
             ->editColumn('foto_absensi', function ($dt) {
-                return '<img class="img-fluid rounded" onclick="detail_gambar(this);" style="width:150px;" src="' . asset($dt->foto_absensi) . '">';
+                return '<div style="width:150px;">
+                    <img class="img-fluid rounded" onclick="detail_gambar(this);" style="width:100%;" src="' . asset($dt->foto_absensi) . '">
+                </div>';
             })
             ->addColumn('waktu', function ($dt) {
                 return Carbon::createFromFormat('Y-m-d H:i:s', $dt->created_at)->format('l, d F Y H:i');

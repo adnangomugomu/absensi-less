@@ -19,11 +19,7 @@ $('body').on('keyup', '.rupiah', function() {
 });
 
 function show_modal_custom(obj) {
-    if (obj.judul.indexOf('class="fa') != -1) {
-        var judul = obj.judul;
-    } else {
-        var judul = '<i class="bx bx-info-circle mr-1"></i>' + obj.judul;
-    }
+    var judul = obj.judul;
 
     $('#modal_custom .modal-title').html(judul);
     $('#modal_custom .modal-body').html(obj.html);
@@ -34,11 +30,7 @@ function show_modal_custom(obj) {
 }
 
 function show_modal_custom_2(obj) {
-    if (obj.judul.indexOf('class="fa') != -1) {
-        var judul = obj.judul;
-    } else {
-        var judul = '<i class="bx bx-info-circle mr-1"></i>' + obj.judul;
-    }
+    var judul = obj.judul;
 
     $('#modal_custom_2 .modal-title').html(judul);
     $('#modal_custom_2 .modal-body').html(obj.html);

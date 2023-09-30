@@ -109,7 +109,7 @@
                 <div class="content-header-left col-12 my-1">
                     <div class="row breadcrumbs-top">
                         <div class="col-12 d-block d-md-flex justify-content-between">
-                            <h5 class="content-header-title float-left pr-1 mb-0">@yield('header')</h5>
+                            <h5 class="content-header-title pr-1 mb-0">@yield('header')</h5>
                             <div>@yield('tombol')</div>
                         </div>
                     </div>

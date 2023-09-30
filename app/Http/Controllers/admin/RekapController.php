@@ -65,9 +65,9 @@ class RekapController extends Controller
                 return count($dt->absensi);
             })
             ->editColumn('foto', function ($dt) {
-                return '                    
-                    <img src="' . asset($dt->foto) . '" alt="foto" onclick="detail_gambar(this);" onerror="this.src=\'' . asset('img/default.png') . '\'" class="img rounded" style="width: 100px;">
-                ';
+                return '<div style="width:100px;">
+                    <img src="' . asset($dt->foto) . '" alt="foto" onclick="detail_gambar(this);" onerror="this.src=\'' . asset('img/default.png') . '\'" class="img rounded" style="width: 100%;">
+                </div>';
             })
             ->addColumn('cetak_pdf', function ($dt) {
                 return '                    
