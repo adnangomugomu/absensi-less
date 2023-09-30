@@ -50,6 +50,6 @@
 
 <div class="row">
     <div class="col-md-12 text-right">
-        <button type="button" onclick="hapusData('{{ $row->id }}');" class="btn btn-danger w-25">Hapus Data</button>
+        <button type="button" onclick="hapusData('{{ $row->id }}');" class="btn btn-danger">Hapus Data</button>
     </div>
 </div>
