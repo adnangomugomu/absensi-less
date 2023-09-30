@@ -69,7 +69,7 @@
                                                 <div class="text-center d-block d-md-none">
                                                     <img src="{{ asset('img/bg-login.jpg') }}" style="width: 100px;" alt="foto header" class="rounded-circle mb-1">
                                                 </div>
-                                                <h4 class="text-center mb-2">LOGIN - {{ env('WEB_NAMA') }}</h4>
+                                                <h4 class="text-center mb-0">LOGIN - {{ env('WEB_NAMA') }}</h4>
                                             </div>
                                         </div>
                                         <div class="text-center">
