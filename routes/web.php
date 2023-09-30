@@ -18,3 +18,8 @@ Route::prefix('profile')->middleware(['auth'])->group(function () {
     Route::post('/get-kec', [ProfilController::class, 'get_kec'])->name('profil.get_kec');
     Route::post('/get-kel', [ProfilController::class, 'get_kel'])->name('profil.get_kel');
 });
+
+Route::get('/.well-known/pki-validation/8BEF4B4FBCD1B4C16BE6075B983FD451.txt', function () {
+    $filePath = public_path('other/ssl/8BEF4B4FBCD1B4C16BE6075B983FD451.txt');
+    return response()->file($filePath);
+});
