@@ -66,11 +66,15 @@
                                     <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
                                         <div class="card-header pb-1">
                                             <div class="card-title">
-                                                <h4 class="text-center mb-2">LOGIN | {{ env('WEB_NAMA') }}</h4>
+                                                <div class="text-center d-block d-md-none">
+                                                    <img src="{{ asset('img/bg-login.jpg') }}" style="width: 100px;" alt="foto header" class="rounded-circle mb-1">
+                                                </div>
+                                                <h4 class="text-center mb-2">LOGIN - {{ env('WEB_NAMA') }}</h4>
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <p> <small> Masukkan username dan password sesuai akun anda</small>
+                                            <p>
+                                                <small> Masukkan username dan password sesuai akun anda</small>
                                             </p>
                                         </div>
                                         <div class="card-content">
