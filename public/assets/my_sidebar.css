@@ -1,0 +1,72 @@
+html body .content .content-wrapper .content-header-title {
+    border-right: none !important
+}
+
+.main-menu.menu-light {
+    color: #727E8C;
+    background: #383636;
+    border: #FFF1BC;
+}
+
+.main-menu.menu-light .navigation {
+    background: #383636;
+}
+
+.main-menu.menu-light .navigation li a,
+.main-menu.menu-light .navigation .navigation-header,
+.primary-sidebar,
+.main-menu.menu-light .navigation>li ul .active>a {
+    color: #FFF1BC;
+}
+
+.main-menu.menu-light .navigation>li.active:not(.sidebar-group-active)>a {
+    background: #C31852;
+    color: #FFF1BC;
+}
+
+.main-menu .navbar-header .navbar-brand .brand-text {
+    color: #FFF1BC;
+}
+
+.main-menu.menu-light .navigation>li.nav-item.open.has-sub.open {
+    border: 1px solid #FFF;
+    background-color: #2b2727;
+}
+
+.main-menu.menu-light .navigation>li ul .active {
+    background: #C31852;
+}
+
+.main-menu.menu-light .navigation>li.nav-item.sidebar-group-active.has-sub.sidebar-group-active {
+    border: 1px solid #383636;
+    background-color: #383636;
+}
+
+.main-menu.menu-light .navigation>li.nav-item.sidebar-group-active.has-sub.sidebar-group-active.open {
+    border: 1px solid #FFF;
+    background-color: #2b2727;
+}
+
+.navbar-header {
+    border-bottom: 1px solid #FFF1BC;
+    margin-bottom: 10px;
+}
+
+table.table-custom thead {
+    background: #C31852;
+}
+
+table.table-custom thead tr th {
+    color: #FFF1BC;
+}
+
+#main-menu-navigation path,
+#main-menu-navigation line,
+#main-menu-navigation polyline {
+    stroke: #FFF1BC;
+}
+
+#main-menu-navigation rect,
+#main-menu-navigation .lievo-likestroke.lievo-altstroke {
+    fill: #FFF1BC;
+}

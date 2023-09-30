@@ -1,0 +1,27 @@
+.select2-selection__rendered {
+    line-height: 31px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 35px !important;
+}
+
+.select2-selection__arrow {
+    height: 34px !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.bg-image1 {
+    background-image: url("../img/pattern1.jpg");
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+@media screen and (max-width: 450px) {
+    .w-sm-100 {
+        width: 100% !important;
+    }
+}
