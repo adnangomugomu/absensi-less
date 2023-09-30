@@ -40,7 +40,7 @@
                                 <audio id="snapSound" src="{{ asset('other/snap.wav') }}" preload = "auto"></audio>
                                 <button type="button" id="btn_take" class="btn btn-success" onclick="snapKamera();"><i class="bx bx-camera"></i> Take Picture</button>
                                 <button type="button" id="btn_start" class="btn btn-primary" style="display: none;" onclick="startKamera();"><i class="bx bx-sync"></i> Start Camera</button>
-                                {{-- <button type="button" id="btn_flip" class="btn btn-danger" onclick="flipKamera();"><i class="bx bxs-slideshow"></i> Change Camera</button> --}}
+                                <button type="button" id="btn_flip" class="btn btn-danger d-block d-md-none" onclick="flipKamera();"><i class="bx bxs-slideshow"></i> Change Camera</button>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -102,7 +102,8 @@
         }
 
         function flipKamera() {
-            webcam.selectCamera();
+            webcam.flip();
+            webcam.start(); 
         }
 
         function doSubmit(dt) {

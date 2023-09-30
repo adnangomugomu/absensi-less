@@ -10,9 +10,15 @@
 
 @section('style')
     <style>
-        .absen {
-            width: 100%;
-            height: 290px;
+        #canvas{
+            height:360px;
+            width:300px;
+        }
+        @media screen and (max-width: 450px) {
+            #canvas{
+                height:250px;
+                width:300px;
+            }
         }
     </style>
 @endsection
@@ -35,21 +41,20 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="d-block">Kamera <small class="text-danger">*</small></label>
-                                <video id="webcam" class="border border-primary rounded absen" autoplay playsinline></video>
-                                <canvas id="canvas" class="d-none border border-primary rounded absen"></canvas>
+                                <video id="webcam" class="border border-secondary rounded" autoplay playsinline></video>                                
                                 <audio id="snapSound" src="{{ asset('other/snap.wav') }}" preload="auto"></audio>
-                                <button type="button" id="btn_take" class="btn btn-success" onclick="snapKamera();"><i class="bx bx-camera"></i> Take Picture</button>
-                                <button type="button" id="btn_start" class="btn btn-primary" style="display: none;" onclick="startKamera();"><i class="bx bx-sync"></i> Start Camera</button>
-                                {{-- <button type="button" id="btn_flip" class="btn btn-danger" onclick="flipKamera();"><i class="bx bxs-slideshow"></i> Change Camera</button> --}}
+                                <div>
+                                    <button type="button" id="btn_take" class="btn btn-success" onclick="snapKamera();"><i class="bx bx-camera"></i> Take Picture</button>
+                                    <button type="button" id="btn_start" class="btn btn-primary" style="display: none;" onclick="startKamera();"><i class="bx bx-sync"></i> Start Camera</button>
+                                    <button type="button" id="btn_flip" class="btn btn-danger d-block d-md-none" onclick="flipKamera();"><i class="bx bxs-slideshow"></i> Change Camera</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="d-block">Foto Absensi <small class="text-danger">*</small></label>
-                                <div class="border border-primary rounded absen">
-                                    <img src="" alt="hasil foto" style="display: none;" class="absen" id="foto_hasil">
-                                    <input type="hidden" name="gambar_data" id="gambar_data">
-                                </div>
+                                <canvas id="canvas" class="border border-secondary"></canvas>
+                                <input type="hidden" name="gambar_data" id="gambar_data">
                             </div>
                         </div>
                     </div>
@@ -76,6 +81,8 @@
         const canvasElement = document.getElementById('canvas');
         const snapSoundElement = document.getElementById('snapSound');
         const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
+        webcam._webcamElement.width = 300;
+        //webcam._webcamElement.height = 400;
         webcam.start()
             .then(result => {
                 console.log("webcam started");
@@ -99,8 +106,6 @@
                 })
                 .then(() => {
                     webcam.stop();
-                    $('#foto_hasil').slideDown(500);
-                    $('#foto_hasil').attr('src', img);
                     $('#btn_take').hide();
                     $('#btn_start').show();
                 })
@@ -113,7 +118,8 @@
         }
 
         function flipKamera() {
-            webcam.selectCamera();
+            webcam.flip();
+            webcam.start(); 
         }
 
         function doSubmit(dt) {
